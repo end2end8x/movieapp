@@ -4,7 +4,7 @@
 # Step2 Copy libMovieStaticLibrary.a and folder include into project MovieDynamicLibrary/StaticLibrary
 # Step3 Build project MovieDynamicLibrary
   got framework MovieDynamicLibrary.framework
-# Step4 Copy MovieDynamicLibrary.framewor into project MovieApp/DynamicLibrary
+# Step4 Copy MovieDynamicLibrary.framework into project MovieApp/DynamicLibrary
 # Step5 Build project MovieApp
 
 # Example search movie API
