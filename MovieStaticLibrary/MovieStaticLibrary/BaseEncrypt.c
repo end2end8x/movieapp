@@ -53,47 +53,38 @@ struct MovieList c_sortListMovie(const char* json) {
     struct MovieList movieList;
     movieList.count = 0;
     struct Movie movies[20];
-    char *results = strstr(json, "\"results\":");
-    if(results != NULL && strlen(results) > 11) {
-        results += 11;
-    } else {
+    char* s = malloc(strlen(json) + 1);
+    strcpy(s, json);
+    char *results = strstr(json, "\"results\"");
+    if(results == NULL || strlen(results) == 0) {
         return movieList;
     }
-    char delim[] = "\"},{\"";
-    char *ptr = strtok(results, delim);
+    char delim[] = "},{";
+    char *ptr = strtok(s, delim);
     int count = 0;
     while(ptr != NULL) {
-        ptr = strtok(0, delim);
-        if(ptr != NULL && strcmp(ptr, "vote_count") == 0){
-            ptr = strtok(0, delim);
-            if(ptr != NULL && strlen(ptr) > 0) {
-                ptr += 1;
-            }
-            movies[count].vote_count = atoi(ptr);
-            ptr = strtok(0, delim);
-            ptr = strtok(0, delim);
-            ptr = strtok(0, delim);
-            ptr = strtok(0, delim);
-            ptr = strtok(0, delim);
-            ptr = strtok(0, delim);
-            ptr = strtok(0, delim);
-            if(ptr != NULL && strcmp(ptr, "title") == 0) {
-                ptr = strtok(0, delim);
-                ptr = strtok(0, delim);
-                if(ptr != NULL) {
-                    movies[count].title = ptr;
-                    count++;
-                    if(count >= 20) {
-                        break;
-                    }
+        ptr = strtok(NULL, delim);
+        if(ptr != NULL) {
+            char* key_vote_count = strstr(ptr, "\"vote_count\":");
+            if(key_vote_count != NULL) {
+                movies[count].vote_count = 0;
+                if(strlen(key_vote_count) > 12 ) {
+                    key_vote_count += 13;
+                    int vote_count = atoi(key_vote_count);
+                    movies[count].vote_count = vote_count;
                 }
+            }
+            char* key_title= strstr(ptr, "\"title\"");
+            if(key_title != NULL) {
+                movies[count].title = ptr;
+                count++;
             }
         }
     }
     qsort(movies, count, sizeof(struct Movie), cmpfunc);
     movieList.count = count;
     for (int i = 0; i < count; i++) {
-        // printf("%d %s\n", movies[i].vote_count, movies[i].title);
+        printf("%d %s\n", movies[i].vote_count, movies[i].title);
         movieList.list[i].vote_count = movies[i].vote_count;
         movieList.list[i].title = malloc(strlen(movies[i].title) + 1);
         strcpy(movieList.list[i].title, movies[i].title);

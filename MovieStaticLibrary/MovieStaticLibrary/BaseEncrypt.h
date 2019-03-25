@@ -18,7 +18,7 @@ extern "C" {
 #endif
     
 struct Movie {
-    const char* title;
+    char* title;
     int vote_count;
 };
     
