@@ -14,8 +14,7 @@
 
 char* apiKey = "";
 
-char* c_getApiKeyFromKeychain(void) {
-    // TODO
+char* c_getApiKey(void) {
     return apiKey;
 }
 
@@ -84,7 +83,7 @@ struct MovieList c_sortListMovie(const char* json) {
     qsort(movies, count, sizeof(struct Movie), cmpfunc);
     movieList.count = count;
     for (int i = 0; i < count; i++) {
-        printf("%d %s\n", movies[i].vote_count, movies[i].title);
+//        printf("%d %s\n", movies[i].vote_count, movies[i].title);
         movieList.list[i].vote_count = movies[i].vote_count;
         movieList.list[i].title = malloc(strlen(movies[i].title) + 1);
         strcpy(movieList.list[i].title, movies[i].title);

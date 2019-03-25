@@ -18,7 +18,7 @@ extern "C" {
 #endif
     
 struct Movie {
-    const char* title;
+    char* title;
     int vote_count;
 };
     
@@ -27,7 +27,7 @@ struct MovieList {
     struct Movie list[20];
 };
     
-char* c_getApiKeyFromKeychain(void);
+char* c_getApiKey(void);
     
 int c_setApiKey(const char* plainKey);
     

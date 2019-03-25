@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DA2CBFA022469E23006B56EB /* MovieStaticLibrary.mm in Sources */ = {isa = PBXBuildFile; fileRef = DA2CBF9F22469E23006B56EB /* MovieStaticLibrary.mm */; };
-		DA2CBFA122469E23006B56EB /* MovieStaticLibrary.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DA2CBF9E22469E23006B56EB /* MovieStaticLibrary.h */; };
 		DA2CBFB72246A505006B56EB /* BaseEncrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = DA2CBFB62246A505006B56EB /* BaseEncrypt.c */; };
 		DA7AB6522247EE46008FF6FA /* BaseEncrypt.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DA2CBFB52246A505006B56EB /* BaseEncrypt.h */; };
 /* End PBXBuildFile section */
@@ -21,7 +19,6 @@
 			dstSubfolderSpec = 16;
 			files = (
 				DA7AB6522247EE46008FF6FA /* BaseEncrypt.h in CopyFiles */,
-				DA2CBFA122469E23006B56EB /* MovieStaticLibrary.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -29,8 +26,6 @@
 
 /* Begin PBXFileReference section */
 		DA2CBF9B22469E23006B56EB /* libMovieStaticLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMovieStaticLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA2CBF9E22469E23006B56EB /* MovieStaticLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieStaticLibrary.h; sourceTree = "<group>"; };
-		DA2CBF9F22469E23006B56EB /* MovieStaticLibrary.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MovieStaticLibrary.mm; sourceTree = "<group>"; };
 		DA2CBFB52246A505006B56EB /* BaseEncrypt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseEncrypt.h; sourceTree = "<group>"; };
 		DA2CBFB62246A505006B56EB /* BaseEncrypt.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = BaseEncrypt.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,8 +60,6 @@
 		DA2CBF9D22469E23006B56EB /* MovieStaticLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				DA2CBF9E22469E23006B56EB /* MovieStaticLibrary.h */,
-				DA2CBF9F22469E23006B56EB /* MovieStaticLibrary.mm */,
 				DA2CBFB52246A505006B56EB /* BaseEncrypt.h */,
 				DA2CBFB62246A505006B56EB /* BaseEncrypt.c */,
 			);
@@ -130,7 +123,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA2CBFB72246A505006B56EB /* BaseEncrypt.c in Sources */,
-				DA2CBFA022469E23006B56EB /* MovieStaticLibrary.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +244,7 @@
 		DA2CBFA522469E23006B56EB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -264,6 +257,7 @@
 		DA2CBFA622469E23006B56EB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";

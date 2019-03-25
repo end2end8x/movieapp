@@ -8,13 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		DA14822A2247573A004D1FBC /* libMovieStaticLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA14822922475739004D1FBC /* libMovieStaticLibrary.a */; };
-		DA14822D224757F1004D1FBC /* MovieStaticLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = DA14822C224757F1004D1FBC /* MovieStaticLibrary.h */; };
 		DA2CBF2F22469875006B56EB /* MovieDynamicLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA2CBF2522469874006B56EB /* MovieDynamicLibrary.framework */; };
 		DA2CBF3422469875006B56EB /* MovieDynamicLibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2CBF3322469875006B56EB /* MovieDynamicLibraryTests.m */; };
 		DA2CBF3622469875006B56EB /* MovieDynamicLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = DA2CBF2822469874006B56EB /* MovieDynamicLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA2CBF41224698A6006B56EB /* BaseApi.h in Headers */ = {isa = PBXBuildFile; fileRef = DA2CBF3F224698A6006B56EB /* BaseApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA2CBF42224698A6006B56EB /* BaseApi.mm in Sources */ = {isa = PBXBuildFile; fileRef = DA2CBF40224698A6006B56EB /* BaseApi.mm */; };
-		DA7AB6542247EE73008FF6FA /* BaseEncrypt.h in Headers */ = {isa = PBXBuildFile; fileRef = DA7AB6532247EE73008FF6FA /* BaseEncrypt.h */; };
+		DA7AB6542247EE73008FF6FA /* BaseEncrypt.h in Headers */ = {isa = PBXBuildFile; fileRef = DA7AB6532247EE73008FF6FA /* BaseEncrypt.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA7AB657224816BA008FF6FA /* MovieSort.h in Headers */ = {isa = PBXBuildFile; fileRef = DA7AB655224816BA008FF6FA /* MovieSort.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA7AB658224816BA008FF6FA /* MovieSort.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB656224816BA008FF6FA /* MovieSort.m */; };
 /* End PBXBuildFile section */
@@ -31,7 +30,6 @@
 
 /* Begin PBXFileReference section */
 		DA14822922475739004D1FBC /* libMovieStaticLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMovieStaticLibrary.a; path = StaticLibrary/libMovieStaticLibrary.a; sourceTree = "<group>"; };
-		DA14822C224757F1004D1FBC /* MovieStaticLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieStaticLibrary.h; sourceTree = "<group>"; };
 		DA2CBF2522469874006B56EB /* MovieDynamicLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MovieDynamicLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA2CBF2822469874006B56EB /* MovieDynamicLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieDynamicLibrary.h; sourceTree = "<group>"; };
 		DA2CBF2922469874006B56EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -68,7 +66,6 @@
 		DA14822B224757F1004D1FBC /* MovieStaticLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				DA14822C224757F1004D1FBC /* MovieStaticLibrary.h */,
 				DA7AB6532247EE73008FF6FA /* BaseEncrypt.h */,
 			);
 			name = MovieStaticLibrary;
@@ -134,7 +131,6 @@
 			files = (
 				DA2CBF41224698A6006B56EB /* BaseApi.h in Headers */,
 				DA2CBF3622469875006B56EB /* MovieDynamicLibrary.h in Headers */,
-				DA14822D224757F1004D1FBC /* MovieStaticLibrary.h in Headers */,
 				DA7AB6542247EE73008FF6FA /* BaseEncrypt.h in Headers */,
 				DA7AB657224816BA008FF6FA /* MovieSort.h in Headers */,
 			);
@@ -381,6 +377,7 @@
 		DA2CBF3A22469875006B56EB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -415,6 +412,7 @@
 		DA2CBF3B22469875006B56EB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -449,6 +447,7 @@
 		DA2CBF3D22469875006B56EB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MovieDynamicLibraryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -465,6 +464,7 @@
 		DA2CBF3E22469875006B56EB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MovieDynamicLibraryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

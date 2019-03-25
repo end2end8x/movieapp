@@ -20,11 +20,9 @@
 //@pro
 
 - (void)setUp {
-//    BaseA
     // Put setup code here. This method is called before the invocation of each test method in the class.
     [super setUp];
-    _baseApi = [[BaseApi alloc] init];
-    
+    self.baseApi = [[BaseApi alloc] init];
 }
 
 - (void)tearDown {
@@ -38,6 +36,14 @@
     // Use XCTAssert and related functions to verify your tests produce the correct results.
     NSMutableArray* array = [ _baseApi listMovieSorted:@"{\"page\":1,\"total_results\":131343,\"total_pages\":6568,\"results\":[{\"vote_count\":158,\"id\":464504,\"video\":false,\"vote_average\":5.8,\"title\":\"A Madea Family Funeral\",\"popularity\":144.356,\"poster_path\":\"\/bOiHlY5JD8GLp7BvWdHkfEftzhQ.jpg\",\"original_language\":\"en\",\"original_title\":\"A Madea Family Funeral\",\"genre_ids\":[35],\"backdrop_path\":\"\/piGjUloiaq6qTpaDLisyDyEsx9i.jpg\",\"adult\":false,\"overview\":\"A joyous family reunion becomes a hilarious nightmare as Madea and the crew travel to backwoods Georgia, where they find themselves unexpectedly planning a funeral that might unveil unpleasant family secrets.\",\"release_date\":\"2019-03-01\"},{\"vote_count\":158,\"id\":464504,\"video\":false,\"vote_average\":5.8,\"title\":\"A Madea Family Funeral\",\"popularity\":144.356,\"poster_path\":\"\/bOiHlY5JD8GLp7BvWdHkfEftzhQ.jpg\",\"original_language\":\"en\",\"original_title\":\"A Madea Family Funeral\",\"genre_ids\":[35],\"backdrop_path\":\"\/piGjUloiaq6qTpaDLisyDyEsx9i.jpg\",\"adult\":false,\"overview\":\"A joyous family reunion becomes a hilarious nightmare as Madea and the crew travel to backwoods Georgia, where they find themselves unexpectedly planning a funeral that might unveil unpleasant family secrets.\",\"release_date\":\"2019-03-01\"}]}"];
     XCTAssertEqual(array.count , 2);
+}
+
+- (void)testGetSetApiKey {
+    // This is an example of a functional test case.
+    // Use XCTAssert and related functions to verify your tests produce the correct results.
+    [self.baseApi setApiKey:@"a"];
+    NSString* apiKey = [self.baseApi getApiKey];
+    XCTAssertTrue([apiKey isEqualToString:@"a"]);
 }
 
 - (void)testPerformanceExample {

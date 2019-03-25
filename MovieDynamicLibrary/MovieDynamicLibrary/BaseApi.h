@@ -14,8 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void) getJsonDataAsync:(NSString* )path withCallback:(void (^)(NSData *data, NSURLResponse *response, NSError *error))callback;
 
+-(NSString*) getApiKey;
 -(NSInteger) setApiKey:(NSString* ) plainKey;
-
+-(struct MovieList) listMovieStruct:(NSString* ) json;
 -(NSMutableArray* ) listMovieSorted:(NSString* ) json;
 
 @end
