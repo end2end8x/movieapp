@@ -37,8 +37,6 @@ char* c_myDecrypt(const char* encryptedKey);
     
 struct MovieList c_sortListMovie(const char* json);
 
-int c_jsonMovieRead(const char *buf, struct Movie *myobj);
-
 #if defined __cplusplus
 };
 #endif

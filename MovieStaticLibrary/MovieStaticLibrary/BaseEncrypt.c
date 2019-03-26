@@ -91,18 +91,8 @@ struct MovieList c_sortListMovie(const char* json) {
     return movieList;
 }
 
-int c_jsonMovieRead(const char *buf, struct Movie *obj) {
-    return 0;
-}
-
 int checkAppCodeSignValid(const char* chain) {
     // Check .ipa Movie app was built by Owner Provisoning   ## return 0
     // It prevent this library can use by others             ## return 1
-    return 0;
-}
-
-int main() {
-    assert(strcmp(c_myEncrypt("b"), "a") == 0);
-    assert(strcmp(c_myDecrypt("a"), "b") == 0);
     return 0;
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DA2CBFB72246A505006B56EB /* BaseEncrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = DA2CBFB62246A505006B56EB /* BaseEncrypt.c */; };
 		DA7AB6522247EE46008FF6FA /* BaseEncrypt.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DA2CBFB52246A505006B56EB /* BaseEncrypt.h */; };
+		DADC8B622249D69700FAEAE1 /* run_test.c in Sources */ = {isa = PBXBuildFile; fileRef = DADC8B612249D69700FAEAE1 /* run_test.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,7 @@
 		DA2CBF9B22469E23006B56EB /* libMovieStaticLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMovieStaticLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA2CBFB52246A505006B56EB /* BaseEncrypt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseEncrypt.h; sourceTree = "<group>"; };
 		DA2CBFB62246A505006B56EB /* BaseEncrypt.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = BaseEncrypt.c; sourceTree = "<group>"; };
+		DADC8B612249D69700FAEAE1 /* run_test.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = run_test.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				DA2CBFB52246A505006B56EB /* BaseEncrypt.h */,
 				DA2CBFB62246A505006B56EB /* BaseEncrypt.c */,
+				DADC8B612249D69700FAEAE1 /* run_test.c */,
 			);
 			path = MovieStaticLibrary;
 			sourceTree = "<group>";
@@ -123,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA2CBFB72246A505006B56EB /* BaseEncrypt.c in Sources */,
+				DADC8B622249D69700FAEAE1 /* run_test.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

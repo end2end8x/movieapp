@@ -35,7 +35,7 @@ class MasterViewController: UIViewController {
                     if error == nil {
                         if let jsonString = String.init(bytes: data, encoding: String.Encoding.utf8) {
                             self.listMovie = baseApi.listMovieSorted(jsonString) as! [MovieSort]
-                            let _ : MovieList = baseApi.listMovieStruct(jsonString)
+//                            let _ : MovieList = baseApi.listMovieStruct(jsonString)
                             print(self.listMovie.count)
                             DispatchQueue.main.async {
                                 self.table.reloadData()
